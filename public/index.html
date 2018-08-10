@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Kodemia CV Builder</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/bootstrap-grid.css">
+		<link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<a class="navbar-brand" href="#"><img src="img/kodemia-white.png" alt=""></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse navbar-right" id="navbarSupportedContent"></div>
+			<div id="sign-in" class="btn btn-outline-success float-right">Facebook</div>
+			<div id="sign-out" class="btn btn-outline-success float-right">Salir</div>
+		</nav>
+
+		<div class="section main-wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="col col-sm-8 offset-sm-2">
+						<div class="card">
+							<div class="card-body">
+									<div class="step step-1">
+										<h1>Ingresa tus datos personales</h1>
+										<h2>Información general</h2>
+										<div class="row">
+											<div class="form-group col-sm-6">
+												<label for="">Nombre</label>
+												<input type="text" class="form-control" id="f-nombre" placeholder="Nombre">
+											</div>
+											<div class="form-group col-sm-6">
+												<label for="">Teléfono</label>
+												<input type="text" class="form-control" id="f-telefono" placeholder="Teléfono">
+											</div>
+											<div class="form-group col-sm-6">
+												<label for="">Ocupación
+												</label>
+												<input type="text" class="form-control" id="f-ocupacion" placeholder="Cargo actual">
+											</div>
+											<div class="form-group col-sm-6">
+												<label for="">Dirección</label>
+												<input type="text" class="form-control" id="f-direccion" placeholder="Dirección">
+											</div>
+
+											<div class="form-group col-sm-6">
+												<label for="">Email</label>
+												<input type="text" class="form-control" id="f-email" placeholder="Email">
+											</div>
+											<div class="form-group col-sm-6">
+												<label for="">Sitio Web</label>
+												<input type="text" class="form-control" id="f-web" placeholder="Sitio Web">
+											</div>
+										</div>
+
+										<h2>Redes sociales</h2>
+										<div class="row">
+											<div class="form-group col-sm-6">
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value="" id="f-c-facebook" onclick="toggleInputControl(this)">
+													<label class="form-check-label" for="defaultCheck1">Facebook</label>
+												</div>
+												<input type="text" class="form-control" id="f-facebook" placeholder="Facebook" disabled>
+											</div>
+											<div class="form-group col-sm-6">
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value="" id="f-t-twitter" onclick="toggleInputControl(this)">
+													<label class="form-check-label" for="defaultCheck1">Twitter</label>
+												</div>
+												<input type="text" class="form-control" id="f-twitter" placeholder="Twitter" disabled>
+											</div>
+											<div class="form-group col-sm-6">
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value="" id="f-c-linkedin" onclick="toggleInputControl(this)">
+													<label class="form-check-label" for="defaultCheck1">Linkedin</label>
+												</div>
+												<input type="text" class="form-control" id="f-linkedin" placeholder="Linkedin" disabled>
+											</div>
+											<div class="form-group col-sm-6">
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value="" id="f-c-skype" onclick="toggleInputControl(this)">
+													<label class="form-check-label" for="defaultCheck1">Skype</label>
+												</div>
+												<input type="text" class="form-control" id="f-skype" placeholder="Skype" disabled>
+											</div>
+										</div>
+									</div>
+									<div class="step step-2">
+										<div class="row">
+											<div class="col-sm-12">
+												<h1>Experiencia</h1>
+												<h2>Empleos anteriores</h2>
+												<div class="experience-wrapper"></div>
+											</div>
+												<div class="form-group col-sm-6">
+													<label for="">Empresa</label>
+													<input type="text" class="form-control" id="f-empresa" placeholder="Empresa">
+												</div>
+												<div class="form-group col-sm-6">
+													<label for="">Puesto</label>
+													<input type="text" class="form-control" id="f-puesto" placeholder="Puesto">
+												</div>
+												<div class="form-group col-sm-6">
+													<label for="">Descripción del puesto</label>
+													<input type="text" class="form-control" id="f-descripcion" placeholder="Descripción del puesto">
+												</div>
+												<div class="form-group col-sm-6">
+													<label for="">Periodo</label>
+													<div class="row">
+														<div class="form-group col-sm-6">
+															<input type="text" class="form-control" id="f-desde" placeholder="De (año)">
+														</div>
+														<div class="form-group col-sm-6">
+															<input type="text" class="form-control" id="f-hasta" placeholder="a (año)">
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-3 offset-sm-9">
+													<!-- <div class="btn btn-outline-success btn-block" onclick="addExperience(this)">Agregar</div> -->
+												</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-12">
+												<h2>Educación</h2>
+											</div>
+											<div class="form-group col-sm-6">
+												<label for="">Institución o plantel</label>
+												<input type="text" class="form-control" id="f-institucion" placeholder="Institución o Plantel">
+											</div>
+											<div class="form-group col-sm-6">
+												<label for="">Título recibido</label>
+												<input type="text" class="form-control" id="f-titulo" placeholder="Título recibido">
+											</div>
+											<div class="form-group col-sm-6">
+												<label for="">Descripción</label>
+												<input type="text" class="form-control" id="f-descripcionEmpresa" placeholder="Empresa">
+											</div>
+											<div class="form-group col-sm-6">
+												<label for="">Periodo</label>
+												<input type="text" class="form-control" id="f-inicio" placeholder="Año de inicio">
+												<input type="text" class="form-control" id="f-finalizacion" placeholder="Año de finalización">
+											</div>
+											<div class="col-sm-3 offset-sm-9">
+												<!-- <div class="btn btn-outline-success">Agregar</div> -->
+											</div>
+										</div>
+										<div class="w-100"></div>
+											<h2>Reconocimientos</h2>
+											<div class="form-group">
+												<label for="">Reconocimiento recibido</label>
+												<input type="text" class="form-control" id="f-reconocimiento" placeholder="Reconocimiento recibido">
+											</div>
+											<div class="form-group">
+												<label for="">Fecha</label>
+												<input type="text" class="form-control" id="f-fechaReconocimiento" placeholder="Fecha">
+											</div>
+											<!-- <div class="btn btn-outline-success float-right">Agregar</div> -->
+
+									</div>
+									<div class="step step-3">
+										<h1>Habilidades y Experiencia</h1>
+										<h2>Escribe el nombre de tu habilidad y el porcentaje en que la dominas (p.e. Inglés 80%) </h2>
+										<div class="form-group">
+											<label for="">Habilidad</label>
+											<input type="text" class="form-control" id="" placeholder="Habilidad">
+										</div>
+										<div class="form-group">
+											<label for="">Dominio</label>
+											<input type="text" class="form-control" id="" placeholder="Dominio">
+										</div>
+										<!-- <div class="btn btn-outline-success float-right">Agregar</div> -->
+										<div id="btn-cv" class="btn btn-outline-success float-right">Generar CV</div>
+									</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/bootstrap.bundle.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/firebase.js" charset="utf-8"></script>
+		<script src="js/form.js" charset="utf-8"></script>
+	</body>
+</html>
